@@ -61,11 +61,16 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(personObject) {
-  getName('Leia');
-  };
-  
-  /* code here */
+const person = {
+  id: 1,
+  name: 'Leia',
+  email: 'leia@leia.com',
+};
+
+function getName(person) {
+  return `Hello my name is ${person.name}`
+}
+/* code here */
 
 
 /**
@@ -81,7 +86,17 @@ function getName(personObject) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(Zach) {
+function makeSmartPerson(name) {
+  const smartPerson = {
+    name:name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return `Hello, my name is ${smartPerson.name}`;
+    },
+  }
+  return smartPerson;
   /* code here */
 }
 
